@@ -227,30 +227,16 @@ ul {
   opacity: 0;
 }
 #main .section2 .container .card.active li:nth-child(1) {
-  -webkit-animation: card 1s ease-in-out forwards;
-          animation: card 1s ease-in-out forwards;
+  animation: card 1s ease-in-out forwards;
 }
 #main .section2 .container .card.active li:nth-child(2) {
-  -webkit-animation: card 1s 0.2s ease-in-out forwards;
-          animation: card 1s 0.2s ease-in-out forwards;
+  animation: card 1s 0.2s ease-in-out forwards;
 }
 #main .section2 .container .card.active li:nth-child(3) {
-  -webkit-animation: card 1s 0.3s ease-in-out forwards;
-          animation: card 1s 0.3s ease-in-out forwards;
+  animation: card 1s 0.3s ease-in-out forwards;
 }
 #main .section2 .container .card.active li:nth-child(4) {
-  -webkit-animation: card 1s 0.4s ease-in-out forwards;
-          animation: card 1s 0.4s ease-in-out forwards;
-}
-@-webkit-keyframes card {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: card 1s 0.4s ease-in-out forwards;
 }
 @keyframes card {
   0% {
@@ -298,13 +284,11 @@ ul {
 }
 #main .section3 .container .brand-img .brand-more a.brandBtn1 {
   transform: translateY(-240%);
-  -webkit-animation: brandBtnAni1 0.5s ease-in-out forwards;
-          animation: brandBtnAni1 0.5s ease-in-out forwards;
+  animation: brandBtnAni1 0.5s ease-in-out forwards;
 }
 #main .section3 .container .brand-img .brand-more a.brandBtn2 {
   transform: translateY(240%);
-  -webkit-animation: brandBtnAni2 0.5s ease-in-out forwards;
-          animation: brandBtnAni2 0.5s ease-in-out forwards;
+  animation: brandBtnAni2 0.5s ease-in-out forwards;
 }
 #main .section3 .container .brand-img .brand-more a::after {
   content: "";
@@ -317,8 +301,7 @@ ul {
   opacity: 0;
 }
 #main .section3 .container .brand-img .brand-more a:hover::after {
-  -webkit-animation: btnHover 1s ease-in-out infinite;
-          animation: btnHover 1s ease-in-out infinite;
+  animation: btnHover 1s ease-in-out infinite;
 }
 #main .section3 .container .brand-img .brand-more a:hover {
   background: rgb(65, 39, 147);
@@ -420,6 +403,8 @@ ul {
 }
 #footer .footer-bottom .copy > ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-bottom: 15px;
 }
 #footer .footer-bottom .copy > ul > li:first-child {
@@ -465,26 +450,9 @@ ul {
   color: rgb(255, 255, 255);
 }
 
-@-webkit-keyframes brandBtnAni1 {
-  0% {
-    transform: translateY(-240%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes brandBtnAni1 {
   0% {
     transform: translateY(-240%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes brandBtnAni2 {
-  0% {
-    transform: translateY(240%);
   }
   100% {
     transform: translateY(0);
@@ -496,16 +464,6 @@ ul {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes btnHover {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
   }
 }
 @keyframes btnHover {
@@ -531,22 +489,12 @@ ul {
     transform: translateX(-50%);
   }
 }
-@media screen and (max-width: 1300px) {
-  #main .section1 .carousel-item {
-    height: 440px;
-  }
-  #main .section1 .carousel-item > img {
-    height: 100%;
-    width: auto;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 @media screen and (max-width: 992px) {
   #main .section2 .container .card li {
     flex-basis: 100%;
+  }
+  #main .section3 .container .brand-area {
+    justify-content: center;
   }
   #main .section3 .container .brand-area > div {
     flex-basis: 100%;
@@ -556,6 +504,9 @@ ul {
   }
 }
 @media screen and (max-width: 780px) {
+  .card-text {
+    font-size: 1rem;
+  }
   #nav > .container {
     display: none;
   }
@@ -578,7 +529,6 @@ ul {
     height: 40px;
     display: block;
     padding: 10px;
-    /* background: rgba(255, 255, 255, .5); */
   }
   #nav .mobile-nav .mobile-bar .bar {
     width: 100%;
@@ -630,12 +580,65 @@ ul {
     width: 100%;
     margin-bottom: 1rem;
   }
+  #footer .footer-bottom .copy > ul > li a {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 440px) {
+  #main .section1 .carousel-item .carousel-caption {
+    bottom: 4rem;
+  }
+  #main .section1 .carousel-item .carousel-caption h1 {
+    font-size: calc(1.2rem + 1.5vw);
+  }
+  #main .section1 .carousel-item .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  #main .section1 .carousel-item .viewMore {
+    font-size: 1rem;
+  }
+  #main .section2 .container .card li {
+    padding: 25px;
+  }
+  #main .section2 .container .card li a .img {
+    margin-top: 15px;
+    height: 200px;
+  }
+  #main .section3 .container .brand-img .brand-more a {
+    width: 90px;
+    height: 90px;
+  }
+  #main .section3 .container .brand-img .brand-more a span {
+    font-size: 14px;
+  }
+  #main .section3 .container .brand-icon-area .brand-icon .brandLogo {
+    width: 80px;
+    height: 80px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #main .section3 .container .brand-icon-area .brand-icon .brandLogo img {
+    width: 100%;
+  }
+  #main .section3 .container .brand-icon-area .brand-icon .icon-name {
+    font-size: 18px;
+  }
   #footer .contect-area .contect1 h6 {
     font-size: 0.8rem;
   }
   #footer .contect-area .contect2 h5 {
     font-size: 2rem;
+  }
+  #footer .footer-bottom .copy p {
+    font-size: 12px;
+  }
+  #footer .footer-bottom .copy > ul > li a {
+    font-size: 12px;
+  }
+  #footer .footer-bottom .sns-area ul li a i {
+    font-size: 1.4rem;
+  }
+  #footer .dropup .more-btn {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

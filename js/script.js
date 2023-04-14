@@ -1,3 +1,23 @@
+//헤더 이미지 사이즈
+
+let bgImg1 = $('.bd-placeholder-img01');
+let bgImg2 = $('.bd-placeholder-img02');
+let bgImg3 = $('.bd-placeholder-img03');
+
+function bgImgSize(){
+    let windowWidth = $(window).width();
+    if(windowWidth < 440) {
+        bgImg1.attr({src:"./img/visual-min01.jpg"})
+        bgImg2.attr({src:"./img/visual-min02.jpg"})
+        bgImg3.attr({src:"./img/visual-min03.jpg"})
+    } else {
+        bgImg1.attr({src:"./img/visual01.jpg"})
+        bgImg2.attr({src:"./img/visual02.jpg"})
+        bgImg3.attr({src:"./img/visual03.jpg"})
+    }
+}
+setInterval(bgImgSize, 100);
+
 //아이콘 색 변경
 let brandIcon = document.querySelectorAll('.brand-icon');
 
@@ -40,7 +60,6 @@ brandIcon3.click(
 brandIcon4.click(
     function(){
         brandImg.attr({src:"./img/coffee-img.jpg"})
-       /*  brandImg.css({opacity:0}).stop().animate({opacity:1},1000) */
         more()
     }
 )
@@ -75,7 +94,6 @@ $(window).scroll(
         const cardLiTop = $('.card').offset().top-200;
         const section2Top = $('.section2').offset().top;
         const wt = $(window).scrollTop();
-        console.log(wt)
         if(wt>cardLiTop){
             cardLi.addClass('active')
         }else{ cardLi.removeClass('active')}
@@ -93,3 +111,4 @@ $('.scrollTop').click(function(e){
     e.preventDefault();
     $('html,body').animate({scrollTop:'0'}, 100);
   });
+ 
