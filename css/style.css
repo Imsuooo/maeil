@@ -403,8 +403,6 @@ ul {
 }
 #footer .footer-bottom .copy > ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding-bottom: 15px;
 }
 #footer .footer-bottom .copy > ul > li:first-child {
@@ -502,6 +500,38 @@ ul {
   #main .section3 .container .other-brand {
     display: none;
   }
+  #footer .footer-contect {
+    align-items: center;
+  }
+  #footer .contect-area {
+    width: 100%;
+    text-align: center;
+  }
+  #footer .contect-area .contect2 h5 {
+    font-size: 4rem;
+  }
+  #footer .search-area {
+    width: 100%;
+  }
+  #footer .search-area form > div {
+    justify-content: center;
+  }
+  #footer .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #footer .footer-bottom .copy {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #footer .footer-bottom .copy > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #footer .footer-bottom .copy > ul > li a {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 780px) {
   .card-text {
@@ -554,34 +584,6 @@ ul {
   }
   #header {
     display: none;
-  }
-  #footer .footer-contect {
-    align-items: center;
-  }
-  #footer .contect-area {
-    width: 100%;
-    text-align: center;
-  }
-  #footer .contect-area .contect2 h5 {
-    font-size: 4rem;
-  }
-  #footer .search-area {
-    width: 100%;
-  }
-  #footer .search-area form > div {
-    justify-content: center;
-  }
-  #footer .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #footer .footer-bottom .copy {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  #footer .footer-bottom .copy > ul > li a {
-    font-size: 14px;
   }
 }
 @media screen and (max-width: 440px) {

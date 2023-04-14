@@ -369,8 +369,6 @@ ul{margin-bottom: 0 !important; padding: 0;}
             }
             >ul{
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
                 padding-bottom: 15px;
                 >li{
                     &:first-child{margin-left: 0;}
@@ -473,11 +471,43 @@ ul{margin-bottom: 0 !important; padding: 0;}
             }
         }
     }
+    #footer{
+        .footer-contect{
+            align-items: center;
+        }
+        .contect-area{
+            width: 100%;
+            text-align: center;
+            .contect2{
+                h5{font-size: 4rem;}
+            }
+        }
+        .search-area{
+            width: 100%;
+            form{
+                >div{
+                    justify-content: center;
+                }
+            }
+        }
+        .footer-bottom{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+           .copy{
+            width: 100%;
+            margin-bottom: 1rem;
+            >ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                >li{a{font-size: 14px;}}
+            }
+           }
+        }
+       }
 }
 @media screen and (max-width:780px) {
-    .card-text{
-       font-size: 1rem;
-    }
+    .card-text{font-size: 1rem;}
    #nav{
     >.container{ display: none;}
     .mobile-nav{
@@ -518,36 +548,6 @@ ul{margin-bottom: 0 !important; padding: 0;}
   #header{
     display: none;
    } 
-   #footer{
-    .footer-contect{
-        align-items: center;
-    }
-    .contect-area{
-        width: 100%;
-        text-align: center;
-        .contect2{
-            h5{font-size: 4rem;}
-        }
-    }
-    .search-area{
-        width: 100%;
-        form{
-            >div{
-                justify-content: center;
-            }
-        }
-    }
-    .footer-bottom{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-       .copy{
-        width: 100%;
-        margin-bottom: 1rem;
-        >ul{>li{a{font-size: 14px;}}}
-       }
-    }
-   }
 }
 @media screen and (max-width:440px){
     #main{
